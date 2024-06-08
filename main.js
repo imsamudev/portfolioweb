@@ -33,3 +33,46 @@ btn.onclick = function () {
     behavior: "smooth",
   });
 };
+
+// changetheme function
+document.addEventListener("DOMContentLoaded", () => {
+  const themeToggle = document.querySelector(".theme-toggle");
+  const themeIcon = document.querySelector("#themeIcon");
+
+  const currentTheme = localStorage.getItem("theme") || "light";
+  setTheme(currentTheme);
+
+  themeToggle.addEventListener("click", () => {
+    const newTheme =
+      localStorage.getItem("theme") === "light" ? "dark" : "light";
+    setTheme(newTheme);
+  });
+});
+
+function setTheme(theme) {
+  if (theme === "dark") {
+    loadDarkTheme();
+    themeIcon.src = "./src/assets/img/global/themes/sun.png";
+  } else {
+    removeDarkTheme();
+    themeIcon.src = "./src/assets/img/global/themes/moon.png";
+  }
+  localStorage.setItem("theme", theme);
+}
+
+function loadDarkTheme() {
+  if (!document.getElementById("dark-theme")) {
+    const link = document.createElement("link");
+    link.rel = "stylesheet";
+    link.href = "src/styles/dark-theme.css";
+    link.id = "dark-theme";
+    document.head.appendChild(link);
+  }
+}
+
+function removeDarkTheme() {
+  const link = document.getElementById("dark-theme");
+  if (link) {
+    document.head.removeChild(link);
+  }
+}
