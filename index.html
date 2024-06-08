@@ -14,17 +14,21 @@
 <body>
   <header>
     <nav class="navbar">
-      <img class="navbar-toggle" id="navbarToggle" src="./src/assets/" alt="barra de navegacion">
+      <img class="navbar-toggle" id="navbarToggle" src="./src/assets/" aria-label="desplegar menú de navegación"
+        alt="barra de navegacion">
       <ul class="navbar-links" id="navbarLinks">
         <li class="nav-links"><a href="#">Inicio</a></li>
         <li class="nav-links"><a href="#">Skills</a></li>
         <li class="nav-links"><a href="#">Proyectos</a></li>
         <li class="nav-links"><a href="#">Sobre mí</a></li>
         <li class="nav-links"><a href="#">Contacto</a></li>
+        <button class="theme-toggle" aria-label="Cambiar tema">
+          <img src="./src/assets/img/global/moon.png" alt="Icono de cambio de tema" id="themeIcon">
+        </button>
       </ul>
     </nav>
   </header>
-  <button class="returnBtn">▲</button>
+  <button class="returnBtn" aria-label="Botón para regresar a navegación">▲</button>
   <section id="inicio"></section>
   <section id="skills"></section>
   <section id="projects"></section>
