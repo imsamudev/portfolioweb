@@ -1,5 +1,14 @@
+:root {
+  --1-primary: #6a0dad;
+  --2-secondary: #9d4edd;
+  --3-accent: #ff007f;
+  --4-text-primary: #f2f2f2;
+  --5-white: #f2f2f2;
+  --6-black: #202020;
+}
+
 body {
-  background-color: #121212;
+  background-color: var(--white);
   color: #ffffff;
 }
 
