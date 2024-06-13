@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -16,7 +18,7 @@
 body {
   width: 100%;
   background-color: var(--5-white);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Karla", sans-serif;
   color: #202020;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
