@@ -13,5 +13,9 @@ body {
 }
 
 .navbar {
-  background-color: #333333;
+  background-color: transparent;
+}
+
+.nav-links a {
+  color: var(--5-white);
 }

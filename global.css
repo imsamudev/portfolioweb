@@ -26,7 +26,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #f0f0f0;
+  background-color: transparent;
   transition: background-color 0.3s ease;
 }
 
@@ -65,6 +65,8 @@ body {
 .navbar-links a {
   color: black;
   text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.2rem;
 }
 
 .theme-toggle img {
