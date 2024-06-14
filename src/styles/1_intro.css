@@ -1,0 +1,35 @@
+#inicio,
+.presentation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.presentation {
+  width: 80%;
+  flex-direction: column;
+  text-align: center;
+}
+
+#profilePhoto {
+  height: 250px;
+  border-radius: 50%;
+  background-color: transparent;
+}
+
+.titles-presentation {
+  margin: 20px 0px;
+}
+#text-presentation {
+  margin: 20px 0px;
+}
+.social-presentation {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+@media (min-width: 768px) {
+  .presentation {
+    width: 60%;
+  }
+}
