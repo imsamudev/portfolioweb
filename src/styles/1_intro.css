@@ -1,3 +1,6 @@
+#inicio {
+  height: 100vh;
+}
 #inicio,
 .presentation {
   display: flex;

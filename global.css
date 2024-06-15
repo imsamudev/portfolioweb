@@ -96,12 +96,6 @@ body {
   z-index: 2;
   cursor: pointer;
 }
-
-/* sections general styles */
-section {
-  height: 100vh;
-}
-
 @media (min-width: 768px) {
   .navbar-toggle {
     display: none;
