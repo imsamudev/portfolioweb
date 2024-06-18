@@ -1,0 +1,15 @@
+#projects,
+.project-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.project-container {
+  width: 80%;
+}
+.project-item {
+  margin: 20px 0px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
