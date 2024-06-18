@@ -1,5 +1,5 @@
 // accordion functionality
-document.querySelectorAll(".accordion-title").forEach((element) => {
+document.querySelectorAll(".accordion-button").forEach((element) => {
   element.addEventListener("click", function () {
     var content = this.nextElementSibling;
     if (window.innerWidth < 769) {
