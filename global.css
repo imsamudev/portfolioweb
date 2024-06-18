@@ -96,6 +96,11 @@ body {
   z-index: 2;
   cursor: pointer;
 }
+/* sections */
+.section-titles {
+  margin: 40px 0px;
+}
+/* sections */
 @media (min-width: 768px) {
   .navbar-toggle {
     display: none;
