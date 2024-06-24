@@ -101,6 +101,29 @@ body {
   margin: 40px 0px;
 }
 /* sections */
+
+/* accordion basic styles */
+.accordion-button {
+  padding: 10px;
+  width: 100%;
+}
+.accordion-item {
+  background-color: transparent;
+}
+.accordion-content {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.3s ease-in-out;
+}
+.accordion.active .accordion-content {
+  max-height: auto;
+}
+.accordion-content .items-elements-accordion {
+  display: inline-block;
+  margin: 5px;
+}
+/* accordion basic styles */
+
 @media (min-width: 768px) {
   .navbar-toggle {
     display: none;
