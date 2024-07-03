@@ -124,6 +124,36 @@ body {
 }
 /* accordion basic styles */
 
+/* footer styles */
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  height: 40vh;
+}
+
+footer,
+.body-text-contact,
+.contact-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.body-text-contact {
+  width: 40%;
+}
+.contact-item {
+  width: 40%;
+}
+small {
+  text-align: center;
+  margin: 2rem;
+}
+/* footer styles */
 @media (min-width: 768px) {
   .navbar-toggle {
     display: none;
@@ -136,5 +166,8 @@ body {
     max-height: none;
     overflow: visible;
     transition: none;
+  }
+  .contact-container {
+    flex-direction: row;
   }
 }
