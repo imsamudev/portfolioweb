@@ -102,6 +102,31 @@ body {
 }
 /* sections */
 
+/* icons */
+.icons {
+  font-size: 3rem;
+  -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+  color: var(--3-accent);
+  animation: flicker 2s infinite linear;
+}
+
+@keyframes flicker {
+  0% {
+    opacity: 0.2;
+    transform: scale(1.1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+  100% {
+    opacity: 0.5;
+    transform: scale(0.9);
+  }
+}
+
+/* icons */
+
 /* accordion basic styles */
 .accordion-button {
   padding: 10px;
