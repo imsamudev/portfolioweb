@@ -10,17 +10,17 @@
   --1-primary: #03045e;
   --2-secondary: #0077b6;
   --3-accent: #00d87a;
-  --4-text-primary: #202020;
-  --5-white: #f2f2f2;
+  --4-wb-alternate1: #f2f2f2;
+  --5-wb-alternate2: #202020;
   --6-black: #202020;
+  --7-white: #f2f2f2;
 }
 
 body {
   width: 100%;
   background-color: var(--5-white);
   font-family: "Karla", sans-serif;
-  color: #202020;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: background-color 0.5s ease, color 0.5s ease;
 }
 
 /* navbar section */
@@ -29,7 +29,7 @@ body {
   flex-direction: column;
   align-items: center;
   background-color: transparent;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.5s ease;
 }
 
 .navbar-toggle {
@@ -106,8 +106,8 @@ body {
 .icons {
   font-size: 3rem;
   -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
-  color: var(--1-primary);
-  animation: flicker 2.5s infinite linear;
+  color: var(--2-secondary);
+  animation: flicker-size 2.5s infinite linear;
 }
 /* icons */
 
