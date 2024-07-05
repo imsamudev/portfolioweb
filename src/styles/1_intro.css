@@ -1,5 +1,7 @@
 #inicio {
   height: 100vh;
+  width: 100%;
+  animation: 8s cubic-bezier(0.25, 1, 0.5, 1) circle-zoom both;
 }
 #inicio,
 .presentation {
@@ -7,30 +9,55 @@
   align-items: center;
   justify-content: space-evenly;
 }
-
 .presentation {
   height: 100vh;
   width: 90%;
   flex-direction: column;
-  justify-content: space-evenly;
   text-align: center;
 }
-
 #profilePhoto {
-  height: 200px;
+  height: 12rem;
   border-radius: 80% 20% 0% 100% / 80% 100% 0% 20%;
-  background-color: var(--1-primary);
-  -webkit-box-reflect: below 10px linear-gradient(transparent, #0005);
+  background: linear-gradient(
+    to bottom,
+    var(--3-accent) 0%,
+    var(--1-primary) 100%
+  );
+  -webkit-box-reflect: below 0.6rem linear-gradient(transparent, #0005);
 }
-
+#profilePhoto:hover {
+  transform: scale(1.1);
+  transition: ease-in-out 0.3s;
+}
 .content-presentation {
   display: flex;
   flex-direction: column;
   align-items: center;
   z-index: 2;
 }
+.titles-presentation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.title-presentation {
+  width: auto;
+  font-size: 2.5rem;
+  font-weight: bolder;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-image: linear-gradient(120deg, var(--3-accent), var(--1-primary));
+}
+
+.subtitle-presentation {
+  color: var(--2-secondary);
+  text-transform: uppercase;
+}
 .text-presentation {
-  margin: 10px 0px;
+  margin: 0.6rem 0rem;
   font-size: 1.1rem;
   font-weight: 500;
   text-align: center;
@@ -39,17 +66,53 @@
   width: 70%;
   display: flex;
   justify-content: space-between;
-  margin: 10px 0px;
+  margin: 0.6rem 0rem;
 }
-@media (min-width: 768px) {
+.icons {
+  animation-duration: 3s;
+}
+.icons:hover {
+  transition: ease 0.8s;
+  color: var(--3-accent);
+}
+@media (min-width: 480px) and (max-width: 1079px) {
+  .presentation {
+    width: 80%;
+    gap: 1rem;
+  }
+  #profilePhoto {
+    height: 16rem;
+  }
+  .titles-presentation {
+    font-size: 1.3rem;
+  }
+  .text-presentation {
+    font-size: 1.3rem;
+  }
+  .social-presentation {
+    margin: 2rem 0rem;
+    width: 50%;
+  }
+}
+@media (min-width: 1080px) {
   .presentation {
     width: 70%;
+    gap: 1rem;
     flex-direction: row;
     font-size: 1.5rem;
+  }
+  #profilePhoto {
+    height: 20rem;
   }
   .content-presentation {
     width: 60%;
     gap: 1rem;
+  }
+  .titles-presentation {
+    font-size: 1.5rem;
+  }
+  .title-presentation {
+    font-size: 3rem;
   }
   .text-presentation {
     font-size: 1.5rem;
