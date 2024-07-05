@@ -43,3 +43,13 @@
     transform: scale(0.9);
   }
 }
+
+@keyframes circle-zoom {
+  from {
+    clip-path: circle(0%);
+    background-color: var(--3-accent);
+  }
+  to {
+    clip-path: circle(200% at top);
+  }
+}
