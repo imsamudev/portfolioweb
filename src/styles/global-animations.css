@@ -12,7 +12,26 @@
 
 @keyframes flicker {
   0% {
-    opacity: 0.2;
+    opacity: 0.1;
+  }
+  25% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.4;
+  }
+}
+
+@keyframes flicker-size {
+  0% {
+    opacity: 0.1;
+    transform: scale(1.1);
+  }
+  25% {
+    opacity: 0.4;
     transform: scale(1.1);
   }
   50% {
@@ -20,7 +39,7 @@
     transform: scale(1.2);
   }
   100% {
-    opacity: 0.5;
+    opacity: 0.4;
     transform: scale(0.9);
   }
 }
