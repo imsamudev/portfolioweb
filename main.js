@@ -50,12 +50,15 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function setTheme(theme) {
+  const themeIcon = document.querySelector("#themeIcon");
   if (theme === "dark") {
     loadDarkTheme();
-    themeIcon.src = "./src/assets/img/global/themes/sun.png";
+    themeIcon.classList.remove("bx-toggle-left");
+    themeIcon.classList.add("bx-toggle-right");
   } else {
     removeDarkTheme();
-    themeIcon.src = "./src/assets/img/global/themes/moon.png";
+    themeIcon.classList.remove("bx-toggle-right");
+    themeIcon.classList.add("bx-toggle-left");
   }
   localStorage.setItem("theme", theme);
 }
