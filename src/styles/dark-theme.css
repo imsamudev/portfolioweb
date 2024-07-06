@@ -19,7 +19,3 @@ body {
 .navbar {
   background-color: transparent;
 }
-
-.nav-links a {
-  color: var(--5-wb-alternate2);
-}
