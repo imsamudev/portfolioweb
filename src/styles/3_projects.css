@@ -1,15 +1,104 @@
 #projects,
-.project-container {
-  height: 100vh;
+.project {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
 }
-.project-container {
-  width: 80%;
+#projects-container {
+  width: 100%;
 }
-.project-item {
-  margin: 20px 0px;
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+.project {
+  justify-content: space-evenly;
+  width: 100%;
+  padding: 1rem;
+}
+.project-title,
+.project-description,
+.cover-image,
+.tabs,
+.tab {
+  width: 95%;
+}
+.project-title {
+  margin: 0.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: var(--2-secondary);
+}
+.project-description {
+  padding-bottom: 2rem;
+  font-size: 1.2rem;
+  text-align: left;
+}
+.cover-image {
+  border-radius: 1rem;
+  height: 15rem;
+  margin-bottom: 3rem;
+  object-fit: cover;
+  box-shadow: 0rem 0.2rem 1rem var(--3-accent);
+}
+.tabs,
+.tab {
+  display: flex;
+  flex: 1 1;
+  flex-wrap: wrap;
+  justify-content: center;
+  border-radius: 1rem;
+  padding: 0.5rem;
+  text-transform: uppercase;
+  color: var(--2-secondary);
+  cursor: pointer;
+}
+.tab.active {
+  background: linear-gradient(
+    to bottom,
+    var(--3-accent) 0%,
+    var(--1-primary) 100%
+  );
+  color: var(--4-wb-alternate1);
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+}
+.tab-content {
+  display: none;
+  opacity: 0;
+}
+.tab-content.show {
+  display: flex;
+  opacity: 1;
+  width: 90%;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 0rem;
+}
+@media (min-width: 480px) and (max-width: 1079px) {
+  .project-title,
+  .project-description,
+  .cover-image,
+  .tabs,
+  .tab {
+    width: 80%;
+  }
+  .cover-image {
+    height: 23rem;
+  }
+  .tabs {
+    flex-wrap: nowrap;
+  }
+}
+
+@media (min-width: 1080px) {
+  .project-title,
+  .project-description,
+  .cover-image,
+  .tabs,
+  .tab {
+    width: 60%;
+  }
+  .cover-image {
+    height: 25rem;
+  }
+  .tabs {
+    flex-wrap: nowrap;
+  }
 }
