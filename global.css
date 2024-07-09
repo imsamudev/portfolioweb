@@ -126,7 +126,11 @@ body {
 }
 /* sections */
 .section-titles {
-  margin: 1rem 0;
+  margin: 1rem 0rem;
+  text-transform: uppercase;
+  font-size: 3rem;
+  opacity: 0.2;
+  -webkit-box-reflect: below 0.01rem linear-gradient(transparent, #0005);
 }
 /* sections */
 
