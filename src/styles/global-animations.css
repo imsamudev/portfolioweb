@@ -53,3 +53,20 @@
     clip-path: circle(200% at top);
   }
 }
+@keyframes shadows {
+  0% {
+    box-shadow: 0rem 0rem 0.3rem var(--3-accent);
+  }
+  25% {
+    box-shadow: 0rem 0rem 0.6rem var(--1-primary);
+  }
+  50% {
+    box-shadow: 0rem 0rem 0.9rem var(--3-accent);
+  }
+  75% {
+    box-shadow: 0rem 0rem 0.6rem var(--1-primary);
+  }
+  100% {
+    box-shadow: 0rem 0rem 0.3rem var(--3-accent);
+  }
+}
