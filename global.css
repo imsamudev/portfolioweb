@@ -126,11 +126,18 @@ body {
 }
 /* sections */
 .section-titles {
-  margin: 1rem 0rem;
+  width: 100%;
   text-transform: uppercase;
   font-size: 3rem;
-  opacity: 0.2;
-  -webkit-box-reflect: below 0.01rem linear-gradient(transparent, #0005);
+  padding: 0.5rem;
+  color: var(--4-wb-alternate1);
+  background-image: linear-gradient(
+    180deg,
+    var(--3-accent),
+    var(--2-secondary)
+  );
+  opacity: 0.15;
+  text-align: center;
 }
 /* sections */
 
