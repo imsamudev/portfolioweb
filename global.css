@@ -50,7 +50,7 @@ body {
   align-items: center;
   background: transparent;
   transition: background-color 0.5s ease-in-out;
-  animation: appear 2s ease-in-out;
+  animation: appear 3s ease-in-out;
 }
 .navbar-toggle {
   font-size: 3rem;
@@ -129,6 +129,7 @@ body {
   width: 100%;
   text-transform: uppercase;
   font-size: 3rem;
+  margin: 5rem 0rem;
   padding: 0.5rem;
   color: var(--4-wb-alternate1);
   background-image: linear-gradient(

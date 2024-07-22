@@ -1,7 +1,7 @@
 #inicio {
   height: 100vh;
   width: 100%;
-  animation: 8s cubic-bezier(0.25, 1, 0.5, 1) circle-zoom both;
+  animation: 6s cubic-bezier(0.25, 1, 0.5, 1) circle-zoom both;
 }
 #inicio,
 .presentation {
@@ -10,10 +10,12 @@
   justify-content: space-evenly;
 }
 .presentation {
-  height: 100vh;
+  height: 100%;
   width: 90%;
   flex-direction: column;
   text-align: center;
+  animation: appear 3s ease-in-out;
+  user-select: none;
 }
 #profilePhoto {
   height: 12rem;
@@ -51,10 +53,11 @@
   background-clip: text;
   background-image: linear-gradient(120deg, var(--3-accent), var(--1-primary));
 }
-
 .subtitle-presentation {
   color: var(--2-secondary);
   text-transform: uppercase;
+  animation: bubblegun 1s ease-in-out;
+  animation-delay: 3s;
 }
 .text-presentation {
   margin: 0.6rem 0rem;
@@ -68,12 +71,10 @@
   justify-content: space-between;
   margin: 0.6rem 0rem;
 }
-.icons {
-  animation-duration: 3s;
-}
 .icons:hover {
-  transition: ease 0.8s;
   color: var(--3-accent);
+  transform: scale(1.1);
+  transition: 0.3s ease-in-out;
 }
 @media (min-width: 480px) and (max-width: 1079px) {
   .presentation {
