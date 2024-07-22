@@ -56,7 +56,7 @@
 .subtitle-presentation {
   color: var(--2-secondary);
   text-transform: uppercase;
-  animation: bubblegun 1s ease-in-out;
+  animation: bubblegum 1s ease-in-out;
   animation-delay: 3s;
 }
 .text-presentation {
