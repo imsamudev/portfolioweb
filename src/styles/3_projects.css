@@ -46,6 +46,7 @@ cover-image,
   padding: 0.3rem;
   border-radius: 0.5rem;
   text-decoration: none;
+  text-align: center;
   animation: shadows 3s infinite ease-in-out;
 }
 .project-description a:hover {
