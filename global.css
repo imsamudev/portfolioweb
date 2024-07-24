@@ -119,7 +119,7 @@ body {
   bottom: 0;
   right: 0;
   background-image: linear-gradient(180deg, var(--3-accent), var(--1-primary));
-  font-size: 3.5rem;
+  font-size: 4rem;
   border: none;
   z-index: 2;
   cursor: pointer;

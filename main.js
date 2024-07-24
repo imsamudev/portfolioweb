@@ -1,52 +1,80 @@
-const navbarToggle = document.getElementById("navbarToggle");
-const navbarLinks = document.getElementById("navbarLinks");
-
-navbarToggle.addEventListener("click", () => {
-  navbarLinks.classList.toggle("active");
-});
-
-// returnBtn to nav function
-var btn = document.querySelector(".returnBtn");
-
-window.onload = function () {
-  btn.style.display = "none";
-};
-
-window.onscroll = function () {
-  var navbar = document.querySelector(".navbar").offsetHeight;
-  if (window.pageYOffset > navbar) {
-    btn.style.display = "block";
-    btn.style.transition = "opacity 0.5s";
-    btn.style.opacity = "1";
-  } else {
-    btn.style.opacity = "0";
-    setTimeout(function () {
-      if (window.pageYOffset <= navbar) {
-        btn.style.display = "none";
-      }
-    }, 500);
-  }
-};
-btn.onclick = function () {
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth",
-  });
-};
-
-// changetheme function
 document.addEventListener("DOMContentLoaded", () => {
+  // navbar functionality
+  const navbarToggle = document.getElementById("navbarToggle");
+  const navbarLinks = document.getElementById("navbarLinks");
+
+  if (navbarToggle && navbarLinks) {
+    navbarToggle.addEventListener("click", () => {
+      navbarLinks.classList.toggle("active");
+    });
+  }
+
+  // returnBtn functionality
+  const returnBtn = document.querySelector(".returnBtn");
+
+  if (returnBtn) {
+    returnBtn.style.display = "none";
+
+    window.addEventListener("scroll", () => {
+      const navbarHeight = document.querySelector(".navbar").offsetHeight;
+      if (window.pageYOffset > navbarHeight) {
+        returnBtn.style.display = "block";
+        returnBtn.style.transition = "opacity 0.5s";
+        returnBtn.style.opacity = "1";
+      } else {
+        returnBtn.style.opacity = "0";
+        setTimeout(() => {
+          if (window.pageYOffset <= navbarHeight) {
+            returnBtn.style.display = "none";
+          }
+        }, 500);
+      }
+    });
+
+    returnBtn.addEventListener("click", () => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    });
+  }
+  // accordion functionality
+  document.querySelectorAll(".accordion-button").forEach((button) => {
+    button.addEventListener("click", () => {
+      const content = button.nextElementSibling;
+      const isActive = button.classList.toggle("active");
+
+      if (window.innerWidth < 769) {
+        document.querySelectorAll(".accordion-content").forEach((item) => {
+          if (item !== content) {
+            item.style.maxHeight = null;
+            item.previousElementSibling.classList.remove("active");
+          }
+        });
+
+        content.style.maxHeight = isActive ? `${content.scrollHeight}px` : null;
+      } else {
+        document.querySelectorAll(".accordion-content").forEach((item) => {
+          item.style.maxHeight = "none";
+        });
+      }
+    });
+  });
+
+  // change theme functionality
   const themeToggle = document.querySelector(".theme-toggle");
   const themeIcon = document.querySelector("#themeIcon");
 
-  const currentTheme = localStorage.getItem("theme") || "light";
-  setTheme(currentTheme);
+  if (themeToggle && themeIcon) {
+    const currentTheme = localStorage.getItem("theme") || "light";
+    setTheme(currentTheme);
 
-  themeToggle.addEventListener("click", () => {
-    const newTheme =
-      localStorage.getItem("theme") === "light" ? "dark" : "light";
-    setTheme(newTheme);
-  });
+    themeToggle.addEventListener("click", () => {
+      const newTheme =
+        localStorage.getItem("theme") === "light" ? "dark" : "light";
+      setTheme(newTheme);
+    });
+  }
 });
 
 function setTheme(theme) {
@@ -79,26 +107,3 @@ function removeDarkTheme() {
     document.head.removeChild(link);
   }
 }
-
-// accordion functionality
-document.querySelectorAll(".accordion-button").forEach((button) => {
-  button.addEventListener("click", () => {
-    const content = button.nextElementSibling;
-    const isActive = button.classList.toggle("active");
-
-    if (window.innerWidth < 769) {
-      document.querySelectorAll(".accordion-content").forEach((item) => {
-        if (item !== content) {
-          item.style.maxHeight = null;
-          item.previousElementSibling.classList.remove("active");
-        }
-      });
-
-      content.style.maxHeight = isActive ? content.scrollHeight + "px" : null;
-    } else {
-      document.querySelectorAll(".accordion-content").forEach((item) => {
-        item.style.maxHeight = "none";
-      });
-    }
-  });
-});

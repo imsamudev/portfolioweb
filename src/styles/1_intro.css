@@ -26,10 +26,12 @@
     var(--1-primary) 100%
   );
   -webkit-box-reflect: below 0.6rem linear-gradient(transparent, #0005);
+  animation: blur-in 3s ease-in-out, shadows 4s infinite 3.5s;
 }
 #profilePhoto:hover {
   transform: scale(1.1);
   transition: ease-in-out 0.3s;
+  cursor: pointer;
 }
 .content-presentation {
   display: flex;
