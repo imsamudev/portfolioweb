@@ -75,6 +75,7 @@ document.addEventListener("DOMContentLoaded", () => {
       setTheme(newTheme);
     });
   }
+  handleInitialLoad();
 });
 
 function setTheme(theme) {
@@ -107,3 +108,24 @@ function removeDarkTheme() {
     document.head.removeChild(link);
   }
 }
+// initial load functionality
+function handleInitialLoad() {
+  if (!sessionStorage.getItem("hasVisited")) {
+    window.location.hash = "#inicio";
+    sessionStorage.setItem("hasVisited", "true");
+  } else {
+    const lastSection = sessionStorage.getItem("lastSection");
+    if (lastSection) {
+      window.location.hash = lastSection;
+    }
+  }
+}
+function saveLastSection(section) {
+  sessionStorage.setItem("lastSection", section);
+}
+document.querySelectorAll(".navbar-links a").forEach((link) => {
+  link.addEventListener("click", (event) => {
+    const section = event.target.getAttribute("href");
+    saveLastSection(section);
+  });
+});
