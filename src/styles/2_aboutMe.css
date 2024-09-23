@@ -65,10 +65,21 @@
   width: 90%;
   font-size: 0.8rem;
 }
+#stack {
+  display: flex;
+  flex-direction: column;
+}
+.stack-item-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 0.5rem;
+  font-size: 0.6rem;
+}
 .stack-icon {
   height: 3rem;
   border-radius: 1rem;
-  margin: 1rem 0.5rem;
   padding: 0.2rem;
   background-color: var(--2-secondary);
   animation: shadows 4s ease-in-out infinite;
@@ -152,6 +163,7 @@
     grid-template-columns: 1fr 0.6fr 1.4fr;
     grid-template-rows: auto auto auto;
   }
+
   #profile-about {
     grid-area: profile;
   }
